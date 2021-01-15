@@ -1,4 +1,4 @@
-# Quote Keeper 
+# Quote Keeper Feature Level
 
 should allow users to enter the following information about each quote they would like to save to the app:
 
@@ -11,6 +11,12 @@ should allow users to enter the following information about each quote they woul
     - IRL
 
 For permission errors use `chmod a+x bin/wdio-test`
+
+## Quote Keeper Server Level
+
+write server tests for the application that allows users to save and display a collection of their favorite quotes.
+
+The scope of our test is that a user should be able to submit a quote and have it displayed back to the user upon submission. 
 
 ## SETUP
 
