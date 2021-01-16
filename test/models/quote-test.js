@@ -1,7 +1,7 @@
 // test/models/quote-test.js
 const { assert } = require("chai");
 const { connectAndDrop, disconnect } = require("../../database");
-const Quote = require("../../models/quotes");
+const Quote = require("../../models/quote");
 
 describe("Quote", () => {
   beforeEach(connectAndDrop);

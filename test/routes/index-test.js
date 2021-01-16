@@ -2,7 +2,7 @@
 const { assert } = require("chai");
 const request = require("supertest");
 const { jsdom } = require("jsdom");
-const Quote = require("../../models/quotes");
+const Quote = require("../../models/quote");
 const { connectAndDrop, disconnect } = require("../../database");
 
 const app = require("../../app");

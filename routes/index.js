@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-const Quote = require('../models/quotes');
+const Quote = require('../models/quote');
 
 /* GET home page. */
 router.get('/', (req, res) => {

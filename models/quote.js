@@ -5,7 +5,7 @@ const quoteSchema = new mongoose.Schema({
   quote: String,
   attributed: String,
   source: String
-})
+});
 
 const Quote = mongoose.model('Quote', quoteSchema);
  
