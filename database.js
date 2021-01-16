@@ -1,5 +1,4 @@
 // database.js
-
 const mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
 
@@ -18,9 +17,6 @@ const disconnect = async () => {
     await mongoose.disconnect();
 };
 module.exports = {
-  mongoose,
-  databaseUrl,
-  options,
   connectAndDrop,
   disconnect
 };

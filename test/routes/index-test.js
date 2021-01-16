@@ -33,5 +33,23 @@ describe("/", () => {
       assert.include(parseTextFromHTML(response.text, "#quotes"), attributed);
       assert.include(parseTextFromHTML(response.text, "#quotes"), source);
     });
+
+    //  second server test that verifies that a “Quote” document is saved to the database.
+    it("stores the quote", async () => {
+      const quote =
+        "Nothing is so painful to the human mind as a great and sudden change.";
+      const attributed = "Mary Shelley";
+      const source = "Frankenstein";
+
+      const response = await request(app)
+        .post("/")
+        .type("form")
+        .send({ quote, attributed, source });
+
+      const citation = await Quote.findOne({});
+      assert.strictEqual(citation.quote, quote);
+      assert.strictEqual(citation.attributed, attributed);
+      assert.strictEqual(citation.source, source);
+    });
   });
 });
