@@ -4,8 +4,8 @@ mongoose.Promise = global.Promise;
 
 const env = process.env.NODE_ENV || 'development';
 const databaseUrl = process.env.DATABASE_URL || `mongodb://localhost/quote-keeper_${env}`;
-const options= {
-  useMongoClient: true,
+const options = {
+    useMongoClient: true,
 };
 
 const connectAndDrop = async () => {
@@ -16,7 +16,11 @@ const connectAndDrop = async () => {
 const disconnect = async () => {
     await mongoose.disconnect();
 };
+
 module.exports = {
-  connectAndDrop,
-  disconnect
+    mongoose,
+    databaseUrl,
+    options,
+    connectAndDrop,
+    disconnect
 };

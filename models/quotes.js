@@ -1,6 +1,5 @@
 // models/quote.js
 const mongoose = require('../database');
-const Schema = mongoose.Schema;
 
 const quoteSchema = new mongoose.Schema({
   quote: String,
@@ -8,4 +7,6 @@ const quoteSchema = new mongoose.Schema({
   source: String
 })
 
-module.exports = mongoose.model('Quote', quoteSchema);
+const Quote = mongoose.model('Quote', quoteSchema);
+ 
+module.exports = Quote;

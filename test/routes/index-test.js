@@ -2,6 +2,8 @@
 const { assert } = require("chai");
 const request = require("supertest");
 const { jsdom } = require("jsdom");
+const Quote = require("../../models/quotes");
+const { connectAndDrop, disconnect } = require("../../database");
 
 const app = require("../../app");
 
@@ -17,6 +19,9 @@ const parseTextFromHTML = (htmlAsString, selector) => {
 };
 
 describe("/", () => {
+  beforeEach(connectAndDrop);
+  afterEach(disconnect);
+
   describe("POST", () => {
     it("creates a new quote", async () => {
       const quote =
