@@ -12,11 +12,16 @@ should allow users to enter the following information about each quote they woul
 
 For permission errors use `chmod a+x bin/wdio-test`
 
-## Quote Keeper Server Level
+## Server Level Tests
 
 write server tests for the application that allows users to save and display a collection of their favorite quotes.
 
 The scope of our test is that a user should be able to submit a quote and have it displayed back to the user upon submission. 
+
+## Model Layer Tests
+
+test to drive the development of the Quote model with the red, green, refactor cycle, 
+set up a database and define a model using MongoDB, Node’s Mongoose package, and the Chai assertion module.
 
 ## SETUP
 
